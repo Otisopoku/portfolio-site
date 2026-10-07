@@ -3,7 +3,7 @@
 [data-theme=dark] .theme-sun{display:block}[data-theme=dark] .theme-moon{display:none}
 html[data-theme=dark]{--paper:#151d19;--ink:#eeeade;--green:#b5d6ad;--muted:#b2bcb0;--line:#3d4c40;--rust:#e7a17f;--lime:#dce799;background:var(--paper)}
 [data-theme=dark] .restored-hero{--ink:#eeeade;--green:#b5d6ad}
-[data-theme=dark] .edition-two .header.wrap{background:rgba(21,29,25,.8);border-color:var(--line);box-shadow:0 1px 0 #ffffff08}
+[data-theme=dark] .edition-two .header.wrap{background:rgba(21,29,25,.8);border-bottom:0;box-shadow:none}
 [data-theme=dark] .hero-description{color:var(--muted)}
 [data-theme=dark] .photo-frame{background:#303a30;color:#eeeade}
 [data-theme=dark] .photo-note svg path{stroke:var(--ink)}

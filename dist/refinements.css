@@ -8,15 +8,15 @@
   background: rgba(243, 241, 233, 0.72);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
   backdrop-filter: blur(24px) saturate(160%);
-  border-bottom: 1px solid rgba(49, 65, 46, 0.11);
-  box-shadow: 0 1px 0 #ffffff40;
+  border-bottom: 0;
+  box-shadow: none;
   transition:
     height 0.4s var(--ease),
     background 0.4s var(--ease);
 }
 .edition-two .header.is-scrolled {
   background: rgba(243, 241, 233, 0.76);
-  box-shadow: 0 5px 22px #15241c08;
+  box-shadow: none;
 }
 .restored-hero .intro {
   font-size: clamp(21px, 2vw, 28px);
