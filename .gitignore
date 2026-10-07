@@ -1,0 +1,48 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+
+# Dependency folders and caches
+node_modules/
+.npm/
+.cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local hosting state (keep the Sites manifest)
+.openai/*
+!.openai/hosting.json
+.wrangler/
+.vercel/
+
+# Temporary output, logs, and deployment packages
+/tmp/
+/temp/
+/coverage/
+/playwright-report/
+/test-results/
+*.log
+*.tmp
+*.temp
+*.tar
+*.tar.gz
+*.tgz
+
+# Editor and operating-system files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# dist/ is the actual website source in this buildless project.
+# Keep it tracked, including images, resume.pdf, and the v1 archive.
