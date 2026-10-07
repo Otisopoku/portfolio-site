@@ -17,6 +17,7 @@ function updateMotion(){
  motionToggle.querySelector('span').textContent=motionEnabled?'on':'off';
  if(!motionEnabled){activeAnimations.forEach(a=>a.cancel());document.querySelectorAll('[data-motion-transform]').forEach(el=>el.style.transform='');}
  scheduleScroll();
+ window.dispatchEvent(new Event('portfolio:motionchange'));
 }
 motionToggle.addEventListener('click',()=>{motionEnabled=!motionEnabled;try{localStorage.setItem('otis-motion',motionEnabled?'on':'off');}catch{}updateMotion();});
 motionPreference.addEventListener('change',()=>{motionEnabled=!motionPreference.matches;updateMotion();});
@@ -47,14 +48,14 @@ function updateScroll(){
 }
 window.addEventListener('scroll',scheduleScroll,{passive:true});window.addEventListener('resize',scheduleScroll,{passive:true});
 updateMotion();
-const reveals=document.querySelectorAll('.section-heading h2,.section-heading>p,.project-card,.experience-photo,.experience-copy,.journal-card,.field-notes-title,.community,.about-copy,.contact-bottom');
+const reveals=document.querySelectorAll('.section-heading h2,.section-heading>p,.experience-photo,.experience-copy,.journal-card,.field-notes-title,.community,.about-copy,.contact-bottom');
 const revealObserver=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){const rest=getComputedStyle(entry.target).transform;animateElement(entry.target,[{transform:`translateY(30px) ${rest==='none'?'':rest}`,opacity:.4},{transform:rest,opacity:1}],{duration:850});revealObserver.unobserve(entry.target);}}},{threshold:.13});
 reveals.forEach(el=>revealObserver.observe(el));
 const photoObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){document.querySelectorAll('.photo-reel figure').forEach((figure,i)=>{const rest=getComputedStyle(figure).transform;animateElement(figure,[{transform:`translateY(${25+i*20}px) rotate(0deg)`},{transform:rest}],{duration:1100,delay:i*100});});photoObserver.unobserve(entry.target);}});},{threshold:.2});
 photoObserver.observe(document.querySelector('.photo-reel'));
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
  const cards=[...document.querySelectorAll('.project-card')];cards.forEach(card=>card.classList.toggle('is-filtered',button.dataset.filter!=='all'));
- cards.filter(card=>!card.hidden).forEach((card,i)=>animateElement(card,[{transform:'translateY(22px)',opacity:.3},{transform:'translateY(0)',opacity:1}],{duration:550,delay:i*45}));
+ // Scroll-linked card transforms are managed by project-stack.js.
 }));
 const projectDialog=document.querySelector('#project-dialog');
 new MutationObserver(()=>{if(projectDialog.open)animateElement(projectDialog,[{opacity:0,transform:'translateY(35px) scale(.96)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:450});}).observe(projectDialog,{attributes:true,attributeFilter:['open']});

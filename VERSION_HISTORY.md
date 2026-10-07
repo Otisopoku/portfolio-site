@@ -16,3 +16,7 @@ Expressive name typography, an interactive four-photo stack, scroll-driven type,
 ## Version 2.1 — 7 October 2026
 
 Restored the original hero composition, image, copy, and typography. Added a sequential typing reveal to the introduction and headline, subtle photo movement on scroll, and project entrance animations. Retained edition two below the hero. Edition two source remains in commit `56fa6109312895976379b1fbce651a32f7ca9a0f`; version one stays unchanged at `/v1/`.
+
+## Version 2.2 — 7 October 2026
+
+Full-width frosted navigation, stronger hero name, and reversible sticky project cards with subtle depth. Filters and detail dialogs remain available. Short screens and reduced motion use a linear layout. Previous version 2.1 is preserved in commit 9f7b94fc5d5c04d571baa5117e733bfb90dec53b; the version-one archive is unchanged.

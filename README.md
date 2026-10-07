@@ -22,3 +22,7 @@ Use the bundled Node executable and the official Sites workflow helper. The proc
 ## Hero refinement (2.1)
 
 `hero.css` restores edition one’s hero composition. `motion.js` measures character boundaries for a sequential typing reveal without changing the text layout. The animation runs once on load; reduced motion or Motion off displays the complete text immediately. The photo has a small desktop scroll offset, and project/section reveals remain progressive enhancements.
+
+## Navigation and project stack (2.2)
+
+refinements.css provides edge-to-edge glass navigation, name emphasis, and responsive project cards. project-stack.js adds subtle scroll depth and manages focus for covered cards. Native sticky positioning makes forward and reverse scrolling symmetrical. Motion off, reduced motion, and short screens use linear cards.
