@@ -24,3 +24,7 @@ Full-width frosted navigation, stronger hero name, and reversible sticky project
 ## Version 2.3 — 7 October 2026
 
 Space Grotesk wordmark with a custom circuit-chip and code-bracket symbol. Section 03 journal photos and text enter from their corresponding left or right side with a gentle stagger. Motion preferences remain respected.
+
+## Version 2.4 — 7 October 2026
+
+Java-themed About introduction and two counter-rotating rings of ten documented languages and twelve tools. Labels stay upright. The rings respond to native scrolling and stop with Motion off or reduced motion.
