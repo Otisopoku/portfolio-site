@@ -12,3 +12,7 @@ Original warm editorial draft approved as the baseline.
 ## Version 2
 
 Expressive name typography, an interactive four-photo stack, scroll-driven type, section entrances, asymmetric project layouts, a floating chapter navigator, and a reduced-motion toggle. Version one remains unchanged at `/v1/`.
+
+## Version 2.1 — 7 October 2026
+
+Restored the original hero composition, image, copy, and typography. Added a sequential typing reveal to the introduction and headline, subtle photo movement on scroll, and project entrance animations. Retained edition two below the hero. Edition two source remains in commit `56fa6109312895976379b1fbce651a32f7ca9a0f`; version one stays unchanged at `/v1/`.

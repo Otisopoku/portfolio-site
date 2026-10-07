@@ -18,3 +18,7 @@ Version one is frozen under `dist/v1/` and linked in edition two. Its exact sour
 ### Windows Sites packaging
 
 Use the bundled Node executable and the official Sites workflow helper. The process PATH needs Git Bash (`C:/Program Files/Git/bin`) and Node. Set `TAR_OPTIONS=--force-local` for Windows archive paths. Pass credentials only through the helper's hidden stdin, never in a file or command argument.
+
+## Hero refinement (2.1)
+
+`hero.css` restores edition one’s hero composition. `motion.js` measures character boundaries for a sequential typing reveal without changing the text layout. The animation runs once on load; reduced motion or Motion off displays the complete text immediately. The photo has a small desktop scroll offset, and project/section reveals remain progressive enhancements.
