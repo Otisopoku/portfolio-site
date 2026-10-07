@@ -58,7 +58,6 @@ document.body.append(dock);
 const sections = [
   ...document.querySelectorAll("#work,#experience,#journey,#about,#contact"),
 ];
-const progress = document.querySelector(".reading-progress");
 const header = document.querySelector(".header");
 const hero = document.querySelector(".restored-hero");
 const heroPhoto = document.querySelector(".restored-hero .photo-frame");
@@ -75,7 +74,6 @@ function updateScroll() {
   const y = window.scrollY,
     height = window.innerHeight;
   const max = document.documentElement.scrollHeight - height;
-  progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
   header.classList.toggle("is-scrolled", y > 45);
   dock.classList.toggle(
     "is-visible",

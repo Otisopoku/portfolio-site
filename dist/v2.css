@@ -14,16 +14,6 @@ html {
 body {
   overflow-x: clip;
 }
-.reading-progress {
-  height: 3px;
-  position: fixed;
-  inset: 0 0 auto;
-  background: var(--rust);
-  transform: scaleX(0);
-  transform-origin: left;
-  z-index: 50;
-  pointer-events: none;
-}
 .header {
   position: sticky;
   top: 0;
