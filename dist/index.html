@@ -9,11 +9,13 @@
     />
     <meta name="theme-color" content="#f3f1e9" />
     <title>Otis Opoku — Always building.</title>
+    <script src="theme.js"></script>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="v2.css" />
     <link rel="stylesheet" href="hero.css" />
     <link rel="stylesheet" href="refinements.css" />
+    <link rel="stylesheet" href="theme.css" />
     <script src="app.js" defer></script>
     <script src="motion.js" defer></script>
     <script src="project-stack.js" defer></script>
@@ -43,6 +45,10 @@
         ><a href="#about">About</a>
       </nav>
       <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Use dark mode" aria-pressed="false" title="Use dark mode" hidden>
+          <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 14A8.6 8.6 0 0 1 10 3.5 8.6 8.6 0 1 0 20.5 14Z"/></svg>
+          <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        </button>
         <a href="v1/" class="edition-link">V1 archive ↗</a
         ><button
           class="motion-toggle"

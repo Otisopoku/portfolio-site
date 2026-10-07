@@ -26,3 +26,7 @@ Use the bundled Node executable and the official Sites workflow helper. The proc
 ## Navigation and project stack (2.2)
 
 refinements.css provides edge-to-edge glass navigation, name emphasis, and responsive project cards. project-stack.js adds subtle scroll depth and manages focus for covered cards. Native sticky positioning makes forward and reverse scrolling symmetrical. Motion off, reduced motion, and short screens use linear cards.
+
+## Color theme
+
+`dist/theme.js` runs before styles to apply the saved `otis-theme` preference without a light flash. Without a saved choice it follows `prefers-color-scheme`. The accessible navbar button saves an explicit light/dark choice; storage failures fall back to an in-memory choice. `dist/theme.css` contains the palette overrides.

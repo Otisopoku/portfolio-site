@@ -28,3 +28,7 @@ Space Grotesk wordmark with a custom circuit-chip and code-bracket symbol. Secti
 ## Version 2.4 — 7 October 2026
 
 Java-themed About introduction and two counter-rotating rings of ten documented languages and twelve tools. Labels stay upright. The rings respond to native scrolling and stop with Motion off or reduced motion.
+
+## Version 2.5 — 7 October 2026
+
+Light/dark navbar toggle with system preference on first visit, persistent user choice, and cross-tab updates. Dark palettes cover the hero, cards, journal, Java section, dialogs, and footer. V1 remains unchanged.
