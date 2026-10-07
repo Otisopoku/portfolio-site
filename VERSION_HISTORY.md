@@ -32,3 +32,7 @@ Java-themed About introduction and two counter-rotating rings of ten documented 
 ## Version 2.5 — 7 October 2026
 
 Light/dark navbar toggle with system preference on first visit, persistent user choice, and cross-tab updates. Dark palettes cover the hero, cards, journal, Java section, dialogs, and footer. V1 remains unchanged.
+
+## Contact launch preparation — 7 October 2026
+
+Added email, copy-email fallback, WhatsApp, calls, and confirmed LinkedIn links. Let’s talk navigates to the contact choices. Kept Sites private for a later domain-based launch.

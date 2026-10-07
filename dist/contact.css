@@ -1,0 +1,11 @@
+.contact-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:55px;border-top:1px solid var(--line);padding-top:36px}
+.contact-option{min-width:0;padding-right:20px}.contact-option+.contact-option{border-left:1px solid var(--line);padding-left:30px}.contact-option .eyebrow{font-size:8px;color:var(--muted);letter-spacing:.13em}
+.contact-choice{display:flex;justify-content:space-between;align-items:center;gap:15px;font-family:Manrope,Arial,sans-serif;font-size:34px;letter-spacing:-.06em;margin:18px 0 15px;line-height:1.2}.contact-choice>span{font-size:25px;transition:transform .2s}.contact-choice:hover{color:var(--green)}.contact-choice:hover>span{transform:translate(3px,-3px)}
+.contact-option>p{font-size:13px;line-height:1.7;color:var(--muted)}.contact-detail{display:block;font-size:11px;margin-top:20px;color:var(--muted)}.copy-email{display:inline-block;padding:8px 0;margin-top:12px;background:none;border:0;border-bottom:1px solid var(--line);font-size:11px;color:var(--green)}.copy-email[hidden],.email-fallback[hidden]{display:none}.contact-option .copy-status{font-size:11px;margin-top:10px;min-height:1.7em;color:var(--green)}.email-fallback{display:block;font-size:11px;margin-top:16px}.email-fallback input{display:block;width:100%;margin-top:6px;padding:10px;background:var(--paper);color:var(--ink);border:1px solid var(--line);font:12px monospace}
+@media(max-width:800px){.contact-options{gap:20px}.contact-option+.contact-option{padding-left:20px}.contact-choice{font-size:27px}.contact-option{padding-right:0}}
+@media(max-width:600px){.contact-options{grid-template-columns:1fr;margin-top:35px;gap:0;padding-top:0}.contact-option,.contact-option+.contact-option{border-left:0;padding:27px 0;border-bottom:1px solid var(--line)}.contact-choice{font-size:32px;margin-top:14px}.contact-option .eyebrow{font-size:9px}.contact-option>p{font-size:14px}.contact-detail{font-size:12px}.copy-email{min-height:44px;font-size:12px}footer>div{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.contact-choice>span{transition:none}.contact-choice:hover>span{transform:none}}
+.motion-off .contact-choice>span{transition:none;transform:none}
+
+/* Contain rotating ring geometry without clipping its visible badges. */
+.about-section{overflow:hidden}

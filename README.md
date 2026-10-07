@@ -4,7 +4,7 @@ Static portfolio draft. Serve `dist/` using an HTTP server. No framework install
 
 `dist/index.html` contains the page narrative, `dist/styles.css` the responsive design, and `dist/app.js` the project data, filters, and accessible detail dialogs. Optimized WebP copies of the supplied photographs live in `dist/images/`; originals remain in the workspace's `assets/` folder.
 
-The consolidated source material is `../content/portfolio.json`. It is editorial reference data, not a runtime dependency; when updating experiences, update the matching page copy as well. Project cover illustrations are decorative, not product screenshots. No project links or LinkedIn destination are fabricated.
+The consolidated source material is `../content/portfolio.json`. It is editorial reference data, not a runtime dependency; when updating experiences, update the matching page copy as well. Project cover illustrations are decorative, not product screenshots. Project links are not fabricated. LinkedIn and contact destinations were confirmed by Otis.
 
 The downloadable résumé is the supplied internship résumé. Google Fonts enhances the typography; local system fallbacks remain available. The website has email links rather than a contact form or backend.
 
@@ -30,3 +30,7 @@ refinements.css provides edge-to-edge glass navigation, name emphasis, and respo
 ## Color theme
 
 `dist/theme.js` runs before styles to apply the saved `otis-theme` preference without a light flash. Without a saved choice it follows `prefers-color-scheme`. The accessible navbar button saves an explicit light/dark choice; storage failures fall back to an in-memory choice. `dist/theme.css` contains the palette overrides.
+
+## Contact and launch
+
+The Let’s talk link opens the contact section. Email uses mailto, WhatsApp opens an editable greeting, and Call me uses tel. contact.js implements email copying with a selectable-text fallback. Visitors send their messages in their own apps; there is no email backend. The site is ready to host as a static directory: publish dist/ with no build command. The Sites preview remains private until a public launch is requested. Codefest (ACES) attendance is confirmed; photos and event details are pending.
