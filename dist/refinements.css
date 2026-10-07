@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap");
-/* Full-bleed glass, aligned content, and naturally reversible project stacking. */
+/* Full-bleed glass, aligned content, and naturally reversible project stacking. No tailwind*/
 .edition-two .header.wrap {
   width: 100%;
   max-width: none;
