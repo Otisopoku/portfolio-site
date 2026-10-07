@@ -48,9 +48,23 @@ function updateScroll(){
 }
 window.addEventListener('scroll',scheduleScroll,{passive:true});window.addEventListener('resize',scheduleScroll,{passive:true});
 updateMotion();
-const reveals=document.querySelectorAll('.section-heading h2,.section-heading>p,.experience-photo,.experience-copy,.journal-card,.field-notes-title,.community,.about-copy,.contact-bottom');
+const reveals=document.querySelectorAll('.section-heading h2,.section-heading>p,.experience-photo,.experience-copy,.field-notes-title,.community,.about-copy,.contact-bottom');
 const revealObserver=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){const rest=getComputedStyle(entry.target).transform;animateElement(entry.target,[{transform:`translateY(30px) ${rest==='none'?'':rest}`,opacity:.4},{transform:rest,opacity:1}],{duration:850});revealObserver.unobserve(entry.target);}}},{threshold:.13});
 reveals.forEach(el=>revealObserver.observe(el));
+// Each journal story enters from its own side; text follows the photograph.
+const journalObserver=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(!entry.isIntersecting)return;
+  const card=entry.target;
+  const direction=[...card.parentElement.children].indexOf(card)%2===0?-1:1;
+  const distance=window.innerWidth<=700?32:Math.min(150,window.innerWidth*.11);
+  [...card.children].forEach((part,index)=>{
+   animateElement(part,[{opacity:0,transform:`translateX(${direction*distance}px)`},{opacity:1,transform:'translateX(0)'}],{duration:1050,delay:index===0?0:90+index*55,fill:'backwards'});
+  });
+  journalObserver.unobserve(card);
+ });
+},{threshold:.08,rootMargin:'0px 0px -45px 0px'});
+document.querySelectorAll('.journal-card').forEach(card=>journalObserver.observe(card));
 const photoObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){document.querySelectorAll('.photo-reel figure').forEach((figure,i)=>{const rest=getComputedStyle(figure).transform;animateElement(figure,[{transform:`translateY(${25+i*20}px) rotate(0deg)`},{transform:rest}],{duration:1100,delay:i*100});});photoObserver.unobserve(entry.target);}});},{threshold:.2});
 photoObserver.observe(document.querySelector('.photo-reel'));
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{

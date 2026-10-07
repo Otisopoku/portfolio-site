@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap');
 /* Full-bleed glass, aligned content, and naturally reversible project stacking. */
 .edition-two .header.wrap{width:100%;max-width:none;margin:0;padding-inline:max(56px,calc((100% - 1320px)/2));background:rgba(243,241,233,.72);-webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);border-bottom:1px solid rgba(49,65,46,.11);box-shadow:0 1px 0 #ffffff40;transition:height .4s var(--ease),background .4s var(--ease)}
 .edition-two .header.is-scrolled{background:rgba(243,241,233,.76);box-shadow:0 5px 22px #15241c08}
@@ -24,3 +25,7 @@
 .edition-two.motion-off #project-grid .project-card{position:relative;top:auto;transform:none!important;filter:none!important;margin-bottom:35px}.edition-two.motion-off #project-grid .project-card.is-covered .project-art,.edition-two.motion-off #project-grid .project-card.is-covered .project-detail-link{pointer-events:auto}
 @media(prefers-reduced-motion:reduce){.edition-two #project-grid .project-card{position:relative;top:auto;transform:none!important;filter:none!important;margin-bottom:35px}.edition-two #project-grid .project-card.is-covered .project-art,.edition-two #project-grid .project-card.is-covered .project-detail-link{pointer-events:auto}}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.edition-two .header.wrap{background:#f3f1e9}}
+
+/* A technical wordmark pairing software brackets with a chip outline. */
+.edition-two .wordmark{display:inline-flex;align-items:center;gap:8px;font-family:"Space Grotesk",monospace;font-weight:700;font-size:35px;letter-spacing:-2.3px}.engineering-mark{width:30px;height:30px;color:var(--green);flex:none}.edition-two footer .wordmark{font-size:29px}.edition-two footer .engineering-mark{width:25px;height:25px}
+@media(max-width:700px){.edition-two .wordmark{font-size:29px;gap:5px;letter-spacing:-1.8px}.engineering-mark{width:25px;height:25px}}

@@ -20,3 +20,7 @@ Restored the original hero composition, image, copy, and typography. Added a seq
 ## Version 2.2 — 7 October 2026
 
 Full-width frosted navigation, stronger hero name, and reversible sticky project cards with subtle depth. Filters and detail dialogs remain available. Short screens and reduced motion use a linear layout. Previous version 2.1 is preserved in commit 9f7b94fc5d5c04d571baa5117e733bfb90dec53b; the version-one archive is unchanged.
+
+## Version 2.3 — 7 October 2026
+
+Space Grotesk wordmark with a custom circuit-chip and code-bracket symbol. Section 03 journal photos and text enter from their corresponding left or right side with a gentle stagger. Motion preferences remain respected.
