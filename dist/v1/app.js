@@ -22,15 +22,6 @@ grid.addEventListener('click',event=>{
  document.querySelector('#dialog-content').innerHTML=`<span class="eyebrow">${p.type}</span><h2 id="dialog-title" class="dialog-heading">${p.name}</h2><p>${p.description}</p><ul>${p.highlights.map(h=>`<li>${h}</li>`).join('')}</ul><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${!p.image?'<p class="dialog-note">Cover artwork is an editorial illustration of the project.</p>':''}`;
  dialog.showModal();document.body.classList.add('modal-open');
 });
-let closingProject=false;
-async function closeProject(){
- if(closingProject||!dialog.open)return;closingProject=true;
- if(!document.body.classList.contains('motion-off')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-  await dialog.animate([{opacity:1,transform:'translateY(0)'},{opacity:0,transform:'translateY(15px)'}],{duration:180,easing:'ease-in'}).finished.catch(()=>{});
- }
- dialog.close();closingProject=false;
-}
-document.querySelector('.dialog-close').addEventListener('click',closeProject);
-dialog.addEventListener('cancel',event=>{event.preventDefault();closeProject();});
-dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeProject();}});
+document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
 dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');trigger?.focus();});
