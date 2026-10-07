@@ -1,27 +1,170 @@
 const projects = [
- {id:'agrivoice',name:'AgriVoice',category:'hackathon',type:'Hackathon / Accessibility',subtitle:'Local languages. More possibilities.',tags:['Ghana NLP','Khaya AI','Voice interfaces'],description:'Built at the Cursor Hackathon at KNUST in March 2026 with a team of two. AgriVoice was designed to help local farmers access online information through voice interactions in local languages.',highlights:['Used Ghana NLP / Khaya AI APIs for speech and text interactions.','Our team was recognized for best use of Ghana NLP / Khaya AI APIs.'],art:'<div class="voice-art"><strong>AgriVoice</strong><div class="voice-bars">'+[18,30,47,26,61,40,70,33,52,24,42,18].map(h=>`<i style="--height:${h}px"></i>`).join('')+'</div><small>INFORMATION, IN YOUR OWN VOICE.</small></div>'},
- {id:'buzz',name:'The Buzz App',category:'software',type:'Web & Mobile',subtitle:'A social space, built together.',tags:['Java','React','Flutter','PostgreSQL','OAuth2','Dokku'],description:'A mobile and web social media application built with a cross-functional team of four.',highlights:['Implemented Google-based OAuth2 authentication.','Used testing, including unit tests, to support code reliability.','Deployed the application on Dokku.'],art:'<div class="buzz-art">buzz<small>A LITTLE MORE CONNECTED.</small></div>'},
- {id:'smart-parking',name:'Smart Parking System',category:'hardware',type:'Web / IoT',subtitle:'Connecting the screen to the street.',tags:['HTML','JavaScript','CSS','TinkerCAD','SolidWorks'],description:'A smart parking solution combining a reservation website, IoT sensors, and mechanical design.',highlights:['Led a team integrating web, IoT, and mechanical components.','Developed a responsive reservation interface with spot availability and booking.','Implemented accessible UI and state management for selection, checkout, and confirmation.','Built dynamic pricing with real-time cost calculations.'],art:'<div class="parking-art"><span>01</span><span>P</span><span>03</span><span>04</span></div>'},
- {id:'gamify',name:'Gamify',category:'software',type:'Web Application',subtitle:'Find your next world to explore.',tags:['React','Chakra UI','RAWG API'],description:'A video game discovery platform powered by the RAWG API.',highlights:['Integrated game data, genres, and visuals from the RAWG API.','Built search and sorting to make discovering games easier.'],art:'<div class="gamify-art"><div class="pixel">✚ ▪ ▪</div><strong>gamify</strong><small>THE NEXT ADVENTURE AWAITS.</small></div>'},
- {id:'virtual-lab',name:'Virtual Physics Lab',category:'hackathon',type:'Hackathon / Education',subtitle:'Practical learning, beyond the lab.',tags:['Backend development','Team collaboration'],description:'A physics virtual laboratory prototype built by a team of five at the Rohde & Schwarz Hackathon, KNUST, in June 2026.',highlights:['Helped develop the application’s backend structure.','The prototype was intended to improve access to practical physics learning.','Our team finished 7th runner-up out of 13 teams.'],image:'images/rhode_and_scwharz_hackathon-2.webp',alt:'Screenshot of the virtual laboratory prototype'},
- {id:'robot-control',name:'Robot Control',category:'hardware',type:'Robotics',subtitle:'A few lines of code. Real movement.',tags:['Python','Raspberry Pi','CamJam EduKit 3','gpiozero'],description:'A Raspberry Pi robot configured and programmed with Python.',highlights:['Configured a functional robot using CamJam EduKit 3.','Controlled movement and responses using gpiozero and time modules.'],art:'<div class="robot-art"><span>{</span><strong>•_•</strong><span>}</span></div>'},
- {id:'phone-charger',name:'Phone Charger',category:'hardware',type:'Electronics',subtitle:'From a schematic to something useful.',tags:['Circuit design','PCB/veroboard','Soldering'],description:'A functional DC phone charger circuit designed and assembled from scratch.',highlights:['Assembled and soldered components following circuit schematics.','Tested and debugged the circuit with measurement tools to ensure stable output voltage.'],art:'<div class="circuit-art"><strong>DC →</strong></div>'}
+  {
+    id: "agrivoice",
+    name: "AgriVoice",
+    category: "hackathon",
+    type: "Hackathon / Accessibility",
+    subtitle: "Local languages. More possibilities.",
+    tags: ["Ghana NLP", "Khaya AI", "Voice interfaces"],
+    description:
+      "Built at the Cursor Hackathon at KNUST in March 2026 with a team of two. AgriVoice was designed to help local farmers access online information through voice interactions in local languages.",
+    highlights: [
+      "Used Ghana NLP / Khaya AI APIs for speech and text interactions.",
+      "Our team was recognized for best use of Ghana NLP / Khaya AI APIs.",
+    ],
+    art:
+      '<div class="voice-art"><strong>AgriVoice</strong><div class="voice-bars">' +
+      [18, 30, 47, 26, 61, 40, 70, 33, 52, 24, 42, 18]
+        .map((h) => `<i style="--height:${h}px"></i>`)
+        .join("") +
+      "</div><small>INFORMATION, IN YOUR OWN VOICE.</small></div>",
+  },
+  {
+    id: "buzz",
+    name: "The Buzz App",
+    category: "software",
+    type: "Web & Mobile",
+    subtitle: "A social space, built together.",
+    tags: ["Java", "React", "Flutter", "PostgreSQL", "OAuth2", "Dokku"],
+    description:
+      "A mobile and web social media application built with a cross-functional team of four.",
+    highlights: [
+      "Implemented Google-based OAuth2 authentication.",
+      "Used testing, including unit tests, to support code reliability.",
+      "Deployed the application on Dokku.",
+    ],
+    art: '<div class="buzz-art">buzz<small>A LITTLE MORE CONNECTED.</small></div>',
+  },
+  {
+    id: "smart-parking",
+    name: "Smart Parking System",
+    category: "hardware",
+    type: "Web / IoT",
+    subtitle: "Connecting the screen to the street.",
+    tags: ["HTML", "JavaScript", "CSS", "TinkerCAD", "SolidWorks"],
+    description:
+      "A smart parking solution combining a reservation website, IoT sensors, and mechanical design.",
+    highlights: [
+      "Led a team integrating web, IoT, and mechanical components.",
+      "Developed a responsive reservation interface with spot availability and booking.",
+      "Implemented accessible UI and state management for selection, checkout, and confirmation.",
+      "Built dynamic pricing with real-time cost calculations.",
+    ],
+    art: '<div class="parking-art"><span>01</span><span>P</span><span>03</span><span>04</span></div>',
+  },
+  {
+    id: "gamify",
+    name: "Gamify",
+    category: "software",
+    type: "Web Application",
+    subtitle: "Find your next world to explore.",
+    tags: ["React", "Chakra UI", "RAWG API"],
+    description: "A video game discovery platform powered by the RAWG API.",
+    highlights: [
+      "Integrated game data, genres, and visuals from the RAWG API.",
+      "Built search and sorting to make discovering games easier.",
+    ],
+    art: '<div class="gamify-art"><div class="pixel">✚ ▪ ▪</div><strong>gamify</strong><small>THE NEXT ADVENTURE AWAITS.</small></div>',
+  },
+  {
+    id: "virtual-lab",
+    name: "Virtual Physics Lab",
+    category: "hackathon",
+    type: "Hackathon / Education",
+    subtitle: "Practical learning, beyond the lab.",
+    tags: ["Backend development", "Team collaboration"],
+    description:
+      "A physics virtual laboratory prototype built by a team of five at the Rohde & Schwarz Hackathon, KNUST, in June 2026.",
+    highlights: [
+      "Helped develop the application’s backend structure.",
+      "The prototype was intended to improve access to practical physics learning.",
+      "Our team finished 7th runner-up out of 13 teams.",
+    ],
+    image: "images/rhode_and_scwharz_hackathon-2.webp",
+    alt: "Screenshot of the virtual laboratory prototype",
+  },
+  {
+    id: "robot-control",
+    name: "Robot Control",
+    category: "hardware",
+    type: "Robotics",
+    subtitle: "A few lines of code. Real movement.",
+    tags: ["Python", "Raspberry Pi", "CamJam EduKit 3", "gpiozero"],
+    description: "A Raspberry Pi robot configured and programmed with Python.",
+    highlights: [
+      "Configured a functional robot using CamJam EduKit 3.",
+      "Controlled movement and responses using gpiozero and time modules.",
+    ],
+    art: '<div class="robot-art"><span>{</span><strong>•_•</strong><span>}</span></div>',
+  },
+  {
+    id: "phone-charger",
+    name: "Phone Charger",
+    category: "hardware",
+    type: "Electronics",
+    subtitle: "From a schematic to something useful.",
+    tags: ["Circuit design", "PCB/veroboard", "Soldering"],
+    description:
+      "A functional DC phone charger circuit designed and assembled from scratch.",
+    highlights: [
+      "Assembled and soldered components following circuit schematics.",
+      "Tested and debugged the circuit with measurement tools to ensure stable output voltage.",
+    ],
+    art: '<div class="circuit-art"><strong>DC →</strong></div>',
+  },
 ];
-const grid=document.querySelector('#project-grid');
-grid.innerHTML=projects.map((p,i)=>`<article class="project-card" data-category="${p.category}"><button class="project-art ${p.id}" data-project="${p.id}" aria-label="Read about ${p.name}"><span class="project-number">PROJECT / ${String(i+1).padStart(2,'0')}</span>${p.image?`<img src="${p.image}" width="1200" height="900" alt="${p.alt}" loading="lazy">`:`<div aria-hidden="true">${p.art}</div>`}<span class="project-open" aria-hidden="true">↗</span></button><div class="project-info"><div><h3>${p.name}</h3><p>${p.subtitle}</p></div><span class="project-type">${p.type}</span></div></article>`).join('');
-document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
- document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
- let count=0;document.querySelectorAll('.project-card').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&card.dataset.category!==button.dataset.filter;if(!card.hidden)count++;});
- document.querySelector('#filter-status').textContent=`Showing ${count} projects`;
-}));
-const dialog=document.querySelector('#project-dialog');
-let trigger=null;
-grid.addEventListener('click',event=>{
- const button=event.target.closest('[data-project]');if(!button)return;
- const p=projects.find(item=>item.id===button.dataset.project);trigger=button;
- document.querySelector('#dialog-content').innerHTML=`<span class="eyebrow">${p.type}</span><h2 id="dialog-title" class="dialog-heading">${p.name}</h2><p>${p.description}</p><ul>${p.highlights.map(h=>`<li>${h}</li>`).join('')}</ul><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${!p.image?'<p class="dialog-note">Cover artwork is an editorial illustration of the project.</p>':''}`;
- dialog.showModal();document.body.classList.add('modal-open');
+const grid = document.querySelector("#project-grid");
+grid.innerHTML = projects
+  .map(
+    (p, i) =>
+      `<article class="project-card" data-category="${p.category}"><button class="project-art ${p.id}" data-project="${p.id}" aria-label="Read about ${p.name}"><span class="project-number">PROJECT / ${String(i + 1).padStart(2, "0")}</span>${p.image ? `<img src="${p.image}" width="1200" height="900" alt="${p.alt}" loading="lazy">` : `<div aria-hidden="true">${p.art}</div>`}<span class="project-open" aria-hidden="true">↗</span></button><div class="project-info"><div><h3>${p.name}</h3><p>${p.subtitle}</p></div><span class="project-type">${p.type}</span></div></article>`,
+  )
+  .join("");
+document.querySelectorAll("[data-filter]").forEach((button) =>
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-filter]").forEach((b) => {
+      b.classList.toggle("active", b === button);
+      b.setAttribute("aria-pressed", String(b === button));
+    });
+    let count = 0;
+    document.querySelectorAll(".project-card").forEach((card) => {
+      card.hidden =
+        button.dataset.filter !== "all" &&
+        card.dataset.category !== button.dataset.filter;
+      if (!card.hidden) count++;
+    });
+    document.querySelector("#filter-status").textContent =
+      `Showing ${count} projects`;
+  }),
+);
+const dialog = document.querySelector("#project-dialog");
+let trigger = null;
+grid.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-project]");
+  if (!button) return;
+  const p = projects.find((item) => item.id === button.dataset.project);
+  trigger = button;
+  document.querySelector("#dialog-content").innerHTML =
+    `<span class="eyebrow">${p.type}</span><h2 id="dialog-title" class="dialog-heading">${p.name}</h2><p>${p.description}</p><ul>${p.highlights.map((h) => `<li>${h}</li>`).join("")}</ul><div class="tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div>${!p.image ? '<p class="dialog-note">Cover artwork is an editorial illustration of the project.</p>' : ""}`;
+  dialog.showModal();
+  document.body.classList.add("modal-open");
 });
-document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
-dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');trigger?.focus();});
+document
+  .querySelector(".dialog-close")
+  .addEventListener("click", () => dialog.close());
+dialog.addEventListener("click", (event) => {
+  if (event.target === dialog) {
+    const r = dialog.getBoundingClientRect();
+    if (
+      event.clientX < r.left ||
+      event.clientX > r.right ||
+      event.clientY < r.top ||
+      event.clientY > r.bottom
+    )
+      dialog.close();
+  }
+});
+dialog.addEventListener("close", () => {
+  document.body.classList.remove("modal-open");
+  trigger?.focus();
+});

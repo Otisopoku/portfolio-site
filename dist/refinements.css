@@ -563,4 +563,24 @@
   }
 }
 
-.java-cup{width:21px;height:21px;display:block}.java-tab .java-cup{width:16px;height:16px}.orbit-badge>span{font-size:9px}@media(max-width:700px){.orbit-badge>span{font-size:7px}.orbit-badge .java-cup{width:18px;height:18px}}
+.java-cup {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+.java-tab .java-cup {
+  width: 16px;
+  height: 16px;
+}
+.orbit-badge > span {
+  font-size: 9px;
+}
+@media (max-width: 700px) {
+  .orbit-badge > span {
+    font-size: 7px;
+  }
+  .orbit-badge .java-cup {
+    width: 18px;
+    height: 18px;
+  }
+}
